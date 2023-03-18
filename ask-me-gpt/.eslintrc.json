@@ -6,6 +6,9 @@
     "extends": [
         "next/core-web-vitals",
         "airbnb",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
         "plugin:prettier/recommended"
     ],
     "overrides": [
