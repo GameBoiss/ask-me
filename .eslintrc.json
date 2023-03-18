@@ -49,6 +49,64 @@
         ],
         "complexity": [
             "off"
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "key-spacing": [
+            "warn"
+        ],
+        "linebreak-style": [
+            "off",
+            null
+        ],
+        "keyword-spacing": [
+            "warn",
+            {
+                "before": true,
+                "after": true,
+                "overrides": {}
+            }
+        ],
+        "no-extra-parens": [
+            "error"
+        ],
+        "no-extra-semi": [
+            "error"
+        ],
+        "no-multiple-empty-lines": [
+            "off",
+            {
+                "max": null,
+                "maxEOF": null,
+                "maxBOF": null
+            }
+        ],
+        "no-trailing-spaces": [
+            "error",
+            {}
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always",
+            {
+                "arraysInObjects": true,
+                "objectsInObjects": true
+            }
+        ],
+        "object-property-newline": [
+            "error",
+            {
+                "allowMultiplePropertiesPerLine": false
+            }
+        ],
+        "space-in-parens": [
+            "off",
+            null,
+            {
+                "exceptions": []
+            }
         ]
     }
 }
