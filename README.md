@@ -33,7 +33,7 @@ npm run lint
 # Check for fix lint errors
 npm run lint-fix
 
-# Triggers npm lint-fix for staged files. If errors still exist you must mannualy fix them before commiting and merging.
+# Triggers npm lint-fix for staged files. If errors still exist you must manually fix them before commiting and merging.
 git commit -m "message"
 
 ```
