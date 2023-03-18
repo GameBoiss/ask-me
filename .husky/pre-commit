@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+export FORCE_COLOR=1 #Fix to show colors in terminal for linter
 
-npm run lint-fix
+npm run lint
