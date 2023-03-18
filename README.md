@@ -22,6 +22,21 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+Frequently ran
+```
+# Run locally
+npm run dev
+
+# Check for lint errors
+npm run lint
+
+# Check for fix lint errors
+npm run lint-fix
+
+# Triggers npm lint-fix for staged files. If errors still exist you must mannualy fix them before commiting and merging.
+git commit -m "message"
+
+```
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
