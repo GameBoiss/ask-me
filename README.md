@@ -51,12 +51,7 @@ Contributions are welcome! To contribute to this project, follow these steps:
 Fork this repository.
 Create a new branch with your changes: `git checkout -b feature/your-feature`.
 Commit your changes: `git commit -m "Add your commit message here"`.
-Push your changes to your branch: `git push origin feature/your-feature`.
-Submit a pull request.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+Push your changes to your branch: `git push origin 
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
