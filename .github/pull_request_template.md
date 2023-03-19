@@ -9,7 +9,7 @@ Please include a summary of the change.
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
 
-## additional Context or Relevant Issues
+## Additional Context or Relevant Issues
 
 Please include additional context.
 
