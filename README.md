@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 To get started with this project, you will need to follow these simple steps:
 
 1. Clone or fork the repository to your local machine.
-2. Go into the 'ask-me'.
+2. Go into the 'ask-me' directory.
 3. Install the required dependencies using the command `npm install`.
 
 ```bash
