@@ -2,7 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, you will need to follow these simple steps:
+
+1. Clone or fork the repository to your local machine.
+2. Go into the 'ask-me' directory.
+3. Install the required dependencies using the command `npm install`.
 
 ```bash
 npm run dev
@@ -12,7 +16,8 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the run the development server using the command `npm run dev`.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
@@ -23,6 +28,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Frequently ran
+
 ```
 # Run locally
 npm run dev
@@ -37,6 +43,17 @@ npm run lint-fix
 git commit -m "message"
 
 ```
+
+## Contributing
+
+Contributions are welcome! To contribute to this project, follow these steps:
+
+Fork this repository.
+Create a new branch with your changes: `git checkout -b feature/your-feature`.
+Commit your changes: `git commit -m "Add your commit message here"`.
+Push your changes to your branch: `git push origin feature/your-feature`.
+Submit a pull request.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
