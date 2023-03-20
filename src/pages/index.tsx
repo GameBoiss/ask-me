@@ -83,6 +83,12 @@ export default function Home() {
             <p className={inter.className}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
             </p>
+            <li role='alertdialog' aria-describedby='notification-id-1'>
+              <div>
+                <button type='button'>Close</button>
+              </div>
+              <div id='notification-id-1'>You have unread emails</div>
+            </li>
           </a>
 
           <a
