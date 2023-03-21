@@ -29,5 +29,5 @@ jobs:
       - name: npm test
         run: |
           echo ----RUNNING TESTS-----
-          npm run test-headless
+          npm test
           echo ----RUNNING TESTS----
