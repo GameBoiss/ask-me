@@ -30,4 +30,5 @@ jobs:
         run: |
           echo ----RUNNING TESTS-----
           npm test
+          a
           echo ----RUNNING TESTS----
