@@ -21,6 +21,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: check out repository
         uses: GameBoiss/ask-me/tree/ci_workflow_test@main
-      - uses: lowlighter/metrics@latest     # (alias for @master)
+      - uses: lowlighter/metrics@main     # (alias for @master)
         # uses: ./.github/actions/my-action
     
