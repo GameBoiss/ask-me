@@ -19,9 +19,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: check out repository
-        uses: GameBoiss/ask-me/tree/ci_workflow_test@main
-      # - uses: GameBoiss/ask-me/tree/ci_workflow_test@main     # (alias for @master)
-      - name: second steps
-        uses: ./.github/actions/my-action
-    
+       - name: npm install
+        run: |
+          echo ----INSTALLING DEPENDENCIES----
+          npm install
+          echo ----INSTALL COMPLETE----
+      - name: npm test
+        run: |
+          echo ----RUNNING TESTS-----
+          npm run test-headless
+          echo ----RUNNING TESTS----
