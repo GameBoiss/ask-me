@@ -22,5 +22,6 @@ jobs:
       - name: check out repository
         uses: GameBoiss/ask-me/tree/ci_workflow_test@main
       # - uses: GameBoiss/ask-me/tree/ci_workflow_test@main     # (alias for @master)
-        # uses: ./.github/actions/my-action
+      - name: second steps
+        uses: ./.github/actions/my-action
     
