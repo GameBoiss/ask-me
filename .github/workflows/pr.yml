@@ -32,4 +32,4 @@ jobs:
           cd ask-me
           echo -----RUNNING TESTS-----
           npm run test-headless
-          echo -----RUNNING TESTS-----
+          echo -----RUNNING TESTs-----
