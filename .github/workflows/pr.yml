@@ -30,6 +30,6 @@ jobs:
       - name: npm test
         run: |
           cd ask-me
-          echo ----RUNNING TESTS----
+          echo ----RUNNING TESTS-----
           npm run test-headless
           echo ----RUNNING TESTS----
