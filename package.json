@@ -10,7 +10,8 @@
     "lint-fix": "eslint --fix .",
     "prepare": "husky install",
     "cypress": "cypress open",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test-once": "jest"
   },
   "dependencies": {
     "@types/node": "18.15.3",
