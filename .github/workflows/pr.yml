@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: GameBoiss/checkout/checkout
+      - uses: GameBoiss/checkout@create-ci-workflow
 
       - name: npm install
         run: |
