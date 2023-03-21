@@ -19,17 +19,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: GameBoiss/ask-me/actions/checkout@v3
-
-      - name: npm install
-        run: |
-          cd ask-me
-          echo ----INSTALLING DEPENDENCIES----
-          npm install
-          echo ----INSTALL COMPLETE----
-      - name: npm test
-        run: |
-          cd ask-me
-          echo ----RUNNING TESTS----
-          npm run test-headless
-          echo ----RUNNING TESTS----
+      - name: check out repository
+        uses: actions/checkout@v3
+      - name: Use local my-action
+        uses: ./.github/actions/my-action
+    
