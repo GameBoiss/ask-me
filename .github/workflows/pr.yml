@@ -1,0 +1,31 @@
+name: PRs for develop
+
+on:
+  pull_request:
+    branches: ['main']
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: npm install
+        run: |
+          cd ask-me
+          echo -----INSTALLING DEPENDENCIES-----
+          npm install
+          echo -----INSTALL COMPLETE-----
+
+      - name: npm test
+        run: |
+          cd ask-me
+          echo -----RUNNING TESTS-----
+          npm run test-headless
+          echo -----RUNNING TESTS-----
