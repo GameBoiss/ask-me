@@ -23,14 +23,11 @@ jobs:
 
       - name: npm install
         run: |
-          ls
-          cd ask-me
           echo ----INSTALLING DEPENDENCIES----
           npm install
           echo ----INSTALL COMPLETE----
       - name: npm test
         run: |
-          cd ask-me
           echo ----RUNNING TESTS-----
           npm run test-headless
           echo ----RUNNING TESTS----
