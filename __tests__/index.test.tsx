@@ -12,4 +12,14 @@ describe('Home', () => {
 
     expect(heading).toBeInTheDocument();
   });
+
+  it('displays test', () => {
+    render(<Home />);
+
+    const heading = screen.getByRole('alertdialog', {
+      description: 'You have unread emails',
+    });
+
+    expect(heading).toBeInTheDocument();
+  });
 });
