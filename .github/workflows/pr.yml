@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: GameBoiss/checkout/checkout@v3
+      - uses: GameBoiss/checkout/checkout@v2
 
       - name: npm install
         run: |
