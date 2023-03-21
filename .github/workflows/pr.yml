@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: check out repository
-        uses: actions/gameboiss@main
+        uses: gameboiss/ci_workflow_test@main
       - name: Use local my-action
         uses: ./.github/actions/my-action
     
