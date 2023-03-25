@@ -1,0 +1,6 @@
+query getDogs {
+  dogs {
+    name
+    breed
+  }
+}

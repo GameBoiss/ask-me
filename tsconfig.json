@@ -19,7 +19,9 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["cypress"]
+    "types": ["cypress"],
+    "strictPropertyInitialization": false,
+    "allowImportingTsExtensions": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "./cypress.config.ts"]
