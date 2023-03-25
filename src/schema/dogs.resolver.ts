@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Dog } from './dogs.ts';
+import { Dog } from './dogs';
 import dogs from './dogs.json';
 
 @Resolver(Dog)

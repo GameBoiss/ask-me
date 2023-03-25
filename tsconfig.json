@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2018",
@@ -20,8 +21,7 @@
       "@/*": ["./src/*"]
     },
     "types": ["cypress"],
-    "strictPropertyInitialization": false,
-    "allowImportingTsExtensions": true
+    "strictPropertyInitialization": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "./cypress.config.ts"]

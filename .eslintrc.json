@@ -113,6 +113,7 @@
         "import/extensions": "off",
         "max-classes-per-file": "off",
         "no-param-reassign": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "import/no-duplicates": "off"
     }
 }
