@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server-micro';
-import { MicroRequest } from 'apollo-server-micro/dist/types';
-import { ServerResponse, IncomingMessage } from 'http';
+// import { MicroRequest } from 'apollo-server-micro/dist/types';
+// import { ServerResponse, IncomingMessage } from 'http';
 import {
   buildSchema,
   Resolver,
