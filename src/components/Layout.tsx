@@ -14,7 +14,7 @@ import {
 } from '@mantine/core';
 import { Home, DogBowl } from 'tabler-icons-react';
 
-export default function Layout({ children }) {
+export default function Layout({ children }: { children: any }) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
@@ -53,7 +53,11 @@ export default function Layout({ children }) {
               color: 'white',
             })}>
             <div
-              style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                height: '100%',
+              }}>
               <MediaQuery largerThan='sm' styles={{ display: 'none' }}>
                 <Burger
                   opened={opened}
