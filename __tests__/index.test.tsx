@@ -1,25 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { queryClient } from '@/api';
+import { QueryClientProvider } from 'react-query';
 import Home from '../src/pages/index';
 import '@testing-library/jest-dom';
 
 describe('Home', () => {
   it('displays an alert dialog', () => {
-    render(<Home />);
+    const { container } = render(
+      <QueryClientProvider client={queryClient}>
+        <Home />
+      </QueryClientProvider>,
+    );
 
-    const heading = screen.getByRole('alertdialog', {
-      description: 'You have unread emails',
-    });
-
-    expect(heading).toBeInTheDocument();
-  });
-
-  it('displays test', () => {
-    render(<Home />);
-
-    const heading = screen.getByRole('alertdialog', {
-      description: 'You have unread emails',
-    });
-
-    expect(heading).toBeInTheDocument();
+    expect(container.firstChild).toHaveClass('dogs');
   });
 });

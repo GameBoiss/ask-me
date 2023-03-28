@@ -18,5 +18,5 @@ export async function getServerSideProps() {
 export default function Home() {
   const { data } = useQuery(['dogs'], () => getDogs());
 
-  return <div>{JSON.stringify(data)}</div>;
+  return <div className='dogs'>{JSON.stringify(data)}</div>;
 }
