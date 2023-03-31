@@ -29,5 +29,5 @@ jobs:
       - name: npm test
         run: |
           echo ----RUNNING TESTS-----
-          npm run test-once
-          echo ----RUNNING TESTS----
+          npm run dev & npm run test-once
+          echo ----FINISHED TESTS----
