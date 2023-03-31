@@ -12,7 +12,7 @@
         "plugin:cypress/recommended",
         "plugin:prettier/recommended"
     ],
-    "ignorePatterns": ["cypress.config.ts"],
+    "ignorePatterns": ["cypress.config.ts", "graphql.ts"],
     "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -110,6 +110,10 @@
                 "exceptions": []
             }
         ],
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "max-classes-per-file": "off",
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off",
+        "import/no-duplicates": "off"
     }
 }
