@@ -1,119 +1,86 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "next/core-web-vitals",
-        "airbnb",
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:cypress/recommended",
-        "plugin:prettier/recommended"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:cypress/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": ["cypress.config.ts", "graphql.ts"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "source": "module",
+    "project": "tsconfig.json"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     ],
-    "ignorePatterns": ["cypress.config.ts", "graphql.ts"],
-    "overrides": [],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "source": "module",
-        "project": "tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "prettier"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": ["warn"],
+    "react/jsx-uses-react": ["off"],
+    "no-shadow": ["off"],
+    "quotes": ["error", "single"],
+    "complexity": ["off"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "key-spacing": ["warn"],
+    "linebreak-style": ["off", null],
+    "keyword-spacing": [
+      "warn",
+      {
+        "before": true,
+        "after": true,
+        "overrides": {}
+      }
     ],
-    "rules": {
-        "react/jsx-filename-extension": [
-            2,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
-            }
-        ],
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": [
-            "warn"
-        ],
-        "react/jsx-uses-react": [
-            "off"
-        ],
-        "no-shadow": [
-            "off"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "complexity": [
-            "off"
-        ],
-        "jsx-quotes": [
-            "error",
-            "prefer-single"
-        ],
-        "key-spacing": [
-            "warn"
-        ],
-        "linebreak-style": [
-            "off",
-            null
-        ],
-        "keyword-spacing": [
-            "warn",
-            {
-                "before": true,
-                "after": true,
-                "overrides": {}
-            }
-        ],
-        "no-extra-parens": [
-            "error"
-        ],
-        "no-extra-semi": [
-            "error"
-        ],
-        "no-multiple-empty-lines": [
-            "off",
-            {
-                "max": null,
-                "maxEOF": null,
-                "maxBOF": null
-            }
-        ],
-        "no-trailing-spaces": [
-            "error",
-            {}
-        ],
-        "object-curly-spacing": [
-            "error",
-            "always",
-            {
-                "arraysInObjects": true,
-                "objectsInObjects": true
-            }
-        ],
-        "object-property-newline": [
-            "error",
-            {
-                "allowMultiplePropertiesPerLine": false
-            }
-        ],
-        "space-in-parens": [
-            "off",
-            null,
-            {
-                "exceptions": []
-            }
-        ],
-        "import/extensions": "off",
-        "max-classes-per-file": "off",
-        "no-param-reassign": "off",
-        "class-methods-use-this": "off",
-        "import/no-duplicates": "off"
-    }
+    "no-extra-parens": ["error"],
+    "no-extra-semi": ["error"],
+    "no-multiple-empty-lines": [
+      "off",
+      {
+        "max": null,
+        "maxEOF": null,
+        "maxBOF": null
+      }
+    ],
+    "no-trailing-spaces": ["error", {}],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInObjects": true,
+        "objectsInObjects": true
+      }
+    ],
+    "object-property-newline": [
+      "error",
+      {
+        "allowMultiplePropertiesPerLine": true
+      }
+    ],
+    "space-in-parens": [
+      "off",
+      null,
+      {
+        "exceptions": []
+      }
+    ],
+    "import/extensions": "off",
+    "max-classes-per-file": "off",
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off",
+    "import/no-duplicates": "off",
+    "react/prop-types": "off"
+  }
 }

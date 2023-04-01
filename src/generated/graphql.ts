@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import * as Dom from 'graphql-request/dist/types.dom';
 import gql from 'graphql-tag';
+import { ReactNode } from 'react';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = {
@@ -51,7 +52,12 @@ export type GetDogsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetDogsQuery = {
   __typename?: 'Query';
-  dogs: Array<{ __typename?: 'Dog'; name: string; breed: string }>;
+  dogs: Array<{
+    sex: string;
+    image: string | null | undefined;
+    ageInWeeks: number;
+    weight: number; __typename?: 'Dog'; name: string; breed: string
+}>;
 };
 
 export const GetDogsDocument = gql`
@@ -59,6 +65,11 @@ export const GetDogsDocument = gql`
     dogs {
       name
       breed
+      ageInWeeks
+      image
+      sex
+      weight
+      fee
     }
   }
 `;

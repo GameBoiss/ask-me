@@ -1,6 +1,11 @@
 query getDogs {
   dogs {
-    name
-    breed
+      name
+      breed
+      ageInWeeks
+      image
+      sex
+      weight
+      fee
   }
 }
