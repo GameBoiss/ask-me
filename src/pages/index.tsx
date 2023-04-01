@@ -21,7 +21,7 @@ export default function Home() {
   const { data } = useQuery(['dogs'], () => getDogs());
 
   return (
-    <div>
+    <div className='dogs'>
       <Grid>
         {data?.dogs.map((f, i) => (
           <Grid.Col xs={12} md={6} lg={4} key={[f.name, i].join(':')} p={5}>
