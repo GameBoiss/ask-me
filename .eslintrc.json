@@ -80,7 +80,6 @@
     "max-classes-per-file": "off",
     "no-param-reassign": "off",
     "class-methods-use-this": "off",
-    "import/no-duplicates": "off",
-    "react/prop-types": "off"
+    "import/no-duplicates": "off"
   }
 }
