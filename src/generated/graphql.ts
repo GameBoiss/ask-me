@@ -51,7 +51,12 @@ export type GetDogsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetDogsQuery = {
   __typename?: 'Query';
-  dogs: Array<{ __typename?: 'Dog'; name: string; breed: string }>;
+  dogs: Array<{
+    image: string | null | undefined;
+    ageInWeeks: number;
+    sex: string;
+    weight: number; __typename?: 'Dog'; name: string; breed: string 
+}>;
 };
 
 export const GetDogsDocument = gql`
@@ -59,6 +64,11 @@ export const GetDogsDocument = gql`
     dogs {
       name
       breed
+      ageInWeeks
+      image
+      sex
+      weight
+      fee
     }
   }
 `;

@@ -5,7 +5,7 @@ import Home from '../src/pages/index';
 import '@testing-library/jest-dom';
 
 describe('Home', () => {
-  it('displays an alert dialog', () => {
+  it('table grid', () => {
     const { container } = render(
       <QueryClientProvider client={queryClient}>
         <Home />
