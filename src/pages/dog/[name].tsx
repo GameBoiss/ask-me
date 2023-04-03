@@ -23,7 +23,6 @@ const DogDetail: React.FunctionComponent<{
   name: string;
 }> = ({ name }) => {
   const { data } = useQuery(['dog'], () => dogByName({ name }));
-  console.log('data: ', data);
 
   if (!data?.dog) {
     return <div>No dog found</div>;

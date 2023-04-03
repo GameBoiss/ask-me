@@ -4,11 +4,11 @@ import dogs from './dogs.json';
 
 @Resolver(Dog)
 export default class DogsResolver {
-  @Query(() => Dog, { nullable: true})
-  dog(@Arg("name", () => String) name: string): Dog | undefined {
-    const dog = dogs.find((dog) => dog.name === name);
+  @Query(() => Dog, { nullable: true })
+  dog(@Arg('name', () => String) name: string): Dog | undefined {
+    const dog = dogs.find(dog => dog.name === name);
     if (dog === undefined) {
-      throw new Error("Dog not found");
+      throw new Error('Dog not found');
     }
     return dog;
   }
