@@ -3,15 +3,9 @@ import * as Dom from 'graphql-request/dist/types.dom';
 import gql from 'graphql-tag';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = {
-  [K in keyof T]: T[K];
-};
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
-  [SubKey in K]?: Maybe<T[SubKey]>;
-};
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
-  [SubKey in K]: Maybe<T[SubKey]>;
-};
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -44,66 +38,72 @@ export type DogAttribute = {
 
 export type Query = {
   __typename?: 'Query';
+  dog?: Maybe<Dog>;
   dogs: Array<Dog>;
 };
 
-export type GetDogsQueryVariables = Exact<{ [key: string]: never }>;
 
-export type GetDogsQuery = {
-  __typename?: 'Query';
-  dogs: Array<{
-    image: string | null | undefined;
-    ageInWeeks: number;
-    sex: string;
-    weight: number; __typename?: 'Dog'; name: string; breed: string 
-}>;
+export type QueryDogArgs = {
+  name: Scalars['String'];
 };
 
+export type GetDogsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetDogsQuery = { __typename?: 'Query', dogs: Array<{ __typename?: 'Dog', name: string, breed: string, ageInWeeks: number, image: string, sex: string, weight: number, fee: number }> };
+
+export type DogByNameQueryVariables = Exact<{
+  name: Scalars['String'];
+}>;
+
+
+export type DogByNameQuery = { __typename?: 'Query', dog?: { __typename?: 'Dog', name: string, breed: string, ageInWeeks: number, image: string, sex: string, description: Array<string>, color: string, attributes: Array<{ __typename?: 'DogAttribute', key: string, value: string }> } | null };
+
+
 export const GetDogsDocument = gql`
-  query getDogs {
-    dogs {
-      name
-      breed
-      ageInWeeks
-      image
-      sex
-      weight
-      fee
+    query getDogs {
+  dogs {
+    name
+    breed
+    ageInWeeks
+    image
+    sex
+    weight
+    fee
+  }
+}
+    `;
+export const DogByNameDocument = gql`
+    query dogByName($name: String!) {
+  dog(name: $name) {
+    name
+    breed
+    ageInWeeks
+    image
+    sex
+    description
+    color
+    attributes {
+      key
+      value
     }
   }
-`;
+}
+    `;
 
-export type SdkFunctionWrapper = <T>(
-  action: (requestHeaders?: Record<string, string>) => Promise<T>,
-  operationName: string,
-  operationType?: string,
-) => Promise<T>;
+export type SdkFunctionWrapper = <T>(action: (requestHeaders?:Record<string, string>) => Promise<T>, operationName: string, operationType?: string) => Promise<T>;
 
-const defaultWrapper: SdkFunctionWrapper = (
-  action,
-  _operationName,
-  _operationType,
-) => action();
 
-export function getSdk(
-  client: GraphQLClient,
-  withWrapper: SdkFunctionWrapper = defaultWrapper,
-) {
+const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationType) => action();
+
+export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
-    getDogs(
-      variables?: GetDogsQueryVariables,
-      requestHeaders?: Dom.RequestInit['headers'],
-    ): Promise<GetDogsQuery> {
-      return withWrapper(
-        wrappedRequestHeaders =>
-          client.request<GetDogsQuery>(GetDogsDocument, variables, {
-            ...requestHeaders,
-            ...wrappedRequestHeaders,
-          }),
-        'getDogs',
-        'query',
-      );
+    getDogs(variables?: GetDogsQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<GetDogsQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<GetDogsQuery>(GetDogsDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getDogs', 'query');
     },
+    dogByName(variables: DogByNameQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<DogByNameQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<DogByNameQuery>(DogByNameDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'dogByName', 'query');
+    }
   };
 }
 export type Sdk = ReturnType<typeof getSdk>;
