@@ -9,6 +9,7 @@ const schema = await buildSchema({
 
 const server = new ApolloServer({
   schema,
+  cache: 'bounded',
 });
 
 export const config = {

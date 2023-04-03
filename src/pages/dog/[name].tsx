@@ -3,11 +3,15 @@ import { dehydrate, useQuery } from 'react-query';
 import { Grid, Text, Button, Title, Image } from '@mantine/core';
 import { queryClient, dogByName } from '../../api';
 
-type paramsType = {
+type ServerParams = {
   params: any;
 };
 
-export async function getServiceSideProps({ params }: paramsType) {
+type DogProps = {
+  name: any;
+};
+
+export async function getServerSideProps({ params }: ServerParams) {
   await queryClient.prefetchQuery(['dog'], () =>
     dogByName({ name: params.name }),
   );
@@ -19,9 +23,7 @@ export async function getServiceSideProps({ params }: paramsType) {
   };
 }
 
-const DogDetail: React.FunctionComponent<{
-  name: string;
-}> = ({ name }) => {
+function DogDetail<T extends DogProps>({ name }: T) {
   const { data } = useQuery(['dog'], () => dogByName({ name }));
 
   if (!data?.dog) {
@@ -73,6 +75,6 @@ const DogDetail: React.FunctionComponent<{
       </Grid.Col>
     </Grid>
   );
-};
+}
 
 export default DogDetail;
