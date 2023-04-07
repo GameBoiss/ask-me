@@ -25,7 +25,7 @@ export default async function getdogs() {
     const result = await dogs
       .find({})
       .limit(20)
-      .map(user => ({
+      .map((user: any) => ({
         ...user,
         id: user._id.toString(),
       }))
