@@ -5,7 +5,7 @@
 import { dehydrate, useQuery } from 'react-query';
 import Link from 'next/link';
 import { Grid, Card, Image, Text, Title } from '@mantine/core';
-import { queryClient, getDogs } from '../api';
+import { queryClient, getDogs } from '@/api';
 
 export async function getServerSideProps() {
   await queryClient.prefetchQuery('dogs', () => getDogs());

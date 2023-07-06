@@ -8,7 +8,7 @@ async function init() {
   if (db) return;
   try {
     client = await clientPromise;
-    db = await client.db('adoptableDog');
+    db = await client.db();
     dogs = await db.collection('dogs');
   } catch (error) {
     throw new Error('Failed to establish connection to database');
